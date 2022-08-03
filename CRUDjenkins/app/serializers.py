@@ -1,3 +1,4 @@
+from dataclasses import field
 from rest_framework import serializers
 from .models import Person
 
@@ -9,6 +10,6 @@ class PersonSerializer(serializers.ModelSerializer):
     gender=serializers.ChoiceField(choices=choice)
 
     class Meta:
-        model = Person
+        model=Person
         fields = '__all__'
     
